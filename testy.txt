@@ -1,0 +1,7 @@
+SELECT ename, name, latefee_charge AS latefee, surcharge AS surcharge, phone_charge AS phone,  `date_paid` 
+FROM  `stagit_receipt` r
+LEFT JOIN stagit_event e ON e.eid = r.eid
+LEFT JOIN stagit_user u ON u.uid = r.uid
+WHERE  `date_paid` 
+BETWEEN  '2014-11-8'
+AND  '2014-12-31'
